@@ -33,8 +33,8 @@ elif app_mode =='Prediction':
 
     #st.image('slider-short-3.jpg')
 
-    st.subheader('Sir/Mme , YOU need to fill all neccesary informations in order to get a reply to your loan request !')
-    st.sidebar.header("Informations about the client :")
+    st.subheader('Sir/Mam, YOU need to fill ALL neccesary informations in order to get a reply to your loan request !')
+    st.sidebar.header("About the Client :")
     gender_dict = {"Male":1,"Female":2}
     feature_dict = {"No":1,"Yes":2}
     edu={'Graduate':1,'Not Graduate':2}
@@ -42,8 +42,8 @@ elif app_mode =='Prediction':
     Gender=st.sidebar.radio('Gender',tuple(gender_dict.keys()))
     Married=st.sidebar.radio('Married',tuple(feature_dict.keys()))
     Self_Employed=st.sidebar.radio('Self Employed',tuple(feature_dict.keys()))
-    Dependents=st.sidebar.radio('Dependents',options=['0','1' , '2' , '3+'])
-    Education=st.sidebar.radio('Education',tuple(edu.keys()))
+    Dependents=st.sidebar.radio('Dependents', options=['0','1' , '2' , '3+'])
+    Education=st.sidebar.radio('Education', tuple(edu.keys()))
     ApplicantIncome=st.sidebar.slider('ApplicantIncome',0,10000,0,)
     CoapplicantIncome=st.sidebar.slider('CoapplicantIncome',0,10000,0,)
     LoanAmount=st.sidebar.slider('LoanAmount in K$',9.0,700.0,200.0)
